@@ -4,7 +4,10 @@ export function showHelpMessage(text, elemToShow) {
   let domElem = document.querySelector(elemToShow);
   let yCoordinates = domElem.getBoundingClientRect().y;
 
+  elemToShow === ".user-text" ? 
+  elemUserHelpMessage.style.top = `${yCoordinates + 70}px` : 
   elemUserHelpMessage.style.top = `${yCoordinates - 10}px`;
+  
   elemUserHelpMessage.style.height = "40px";
   elemUserHelpMessage.innerHTML = text;
   elemUserHelpMessage.style.opacity = 1;

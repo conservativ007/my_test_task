@@ -12,7 +12,8 @@ document.querySelector(".user-name").addEventListener("input", (e) => {
   } 
 });
 
-export function checkFirstnameAndLastname(userData) {
+export function checkFirstnameAndLastname() {
+  let userData = document.querySelector(".user-name").value.trim();
 
   if(userData.length === 0) return showHelpMessage("this field is required", ".user-name");
 
