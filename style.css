@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -9,6 +10,7 @@
 }
 
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -16,8 +18,29 @@ form {
 form input {
   height: 40px;
   margin-bottom: 10px;
+  padding: 5px;
 }
 
 form button {
   margin-top: 10px;
+}
+
+.user-name {
+  text-transform: uppercase;
+}
+
+.user__help-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  background-color: #d63031;
+  width: 100%;
+  /* font-size: 22px; */
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+
+  transition: .5s;
 }
