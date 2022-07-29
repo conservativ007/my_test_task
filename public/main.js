@@ -19,6 +19,7 @@ document.querySelector("button").addEventListener("click", (e) => {
 
   if (result === false) return;
 
+  document.querySelector("button").disabled = true;
 
   let form = document.querySelector(".user-form");
 
@@ -37,6 +38,7 @@ document.querySelector("button").addEventListener("click", (e) => {
       const user = await response.json();
       console.log(`user ${user["user-name"]} was created`);
       userMessageSuccessful();
+      document.querySelector("button").disabled = false;
     }
   }
   CreateUser();
