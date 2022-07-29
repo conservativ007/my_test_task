@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
     <script defer type="module" src="main.js"></script>
     <script defer type="module" src="./functions/chekUserNameAndSurname.js"></script>
     <script defer type="module" src="./functions/maskPhoneNum.js"></script>
@@ -14,39 +15,43 @@
     <div class="container">
       <div class="user-message__successful">user was sent</div>
       <form method="post" class="user-form" novalidate>
-        <input
-          class="user-name"
-          placeholder="first name, last name"
-          type="text"
-          name="user-name"
-        />
-
-        <input
-          class="user-email"
-          placeholder="email"
-          type="text"
-          name="user-email"
-        />
-        <input
-          class="user-phone"
-          placeholder="phone"
-          type="tel"
-          name="user-phone"
-        />
-        <input
-          class="user-birthday"
-          type="date"
-          name="user-birthday"
-        />
-        <textarea
+        
+        <div class="text-field text-field_floating">
+          <input id="user-name" class="user-name text-field__input" placeholder="first name, last name" type="text" name="user-name" />
+          <label class="text-field__label" for="user-name">Name, Surname</label>
+          <div class="user-message user-message__name"></div>
+        </div>
+        
+        <div class="text-field text-field_floating">
+          <input id="email" class="user-email text-field__input" placeholder="email" type="text" name="user-email" />
+          <label class="text-field__label" for="email">Email</label>
+          <div class="user-message user-message__email"></div>
+        </div>
+       
+        <div class="text-field text-field_floating">
+          <input id="phone" class="user-phone text-field__input" placeholder="phone" type="text" name="user-phone" />
+          <label class="text-field__label" for="phone">Phone</label>
+          <div class="user-message user-message__phone"></div>
+        </div>
+        
+        <div class="text-field text-field_floating">
+          <input id="birthday" class="user-birthday text-field__input" placeholder="phone" type="date" name="user-birthday" />
+          <label class="text-field__label" for="birthday">Birthday</label>
+          <div class="user-message user-message__birthday"></div>
+        </div>
+        
+        <div class="text-field text-field_floating">
+          <textarea
           class="user-text"
           name="user-message"
           id=""
           cols="10"
           rows="10"
         ></textarea>
+        <div class="user-message user-message__message"></div>
+        </div>
+        
         <button>send</button>
-        <div class="user__help-message">some text</div>
       </form>
     </div>
   </body>

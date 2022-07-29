@@ -1,32 +1,18 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 .container {
   margin: 50px auto;
   width: 500px;
-}
-
-form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-form input {
-  height: 40px;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-
-form button {
-  margin-top: 10px;
-}
-
-.user-name {
-  text-transform: uppercase;
 }
 
 .user__help-message {
@@ -60,7 +46,35 @@ form button {
   left: calc(50% - 250px);
   top: calc(50% - 25px);
 
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
   transition: 1s;
+}
+
+.show-message__successful {
+  z-index: 3;
+  opacity: 1;
+}
+
+.user-message {
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  background-color: #d63031;
+  border-radius: 4px;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  transition: .5s;
+}
+
+.user-message__show-message {
+  z-index: 1;
+  opacity: 1;
 }
