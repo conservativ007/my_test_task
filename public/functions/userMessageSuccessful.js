@@ -1,5 +1,6 @@
-export function userMessageSuccessful() {
+export function userMessageSuccessful(text) {
   let message = document.querySelector(".user-message__successful");
+  message.innerHTML = text;
   message.classList.add("show-message__successful");
 
 

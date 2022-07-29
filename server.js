@@ -27,9 +27,10 @@ app.post("/api/users", jsonParser, (request, response) => {
   data = JSON.stringify(users);
   fs.writeFileSync("users.json", data);
 
-  // console.log(request.body)
-
-  response.send(request.body);
+  response.send({
+    status: "success",
+    message: "sending was successful"
+  });
 })
 
 

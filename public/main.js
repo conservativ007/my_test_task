@@ -35,9 +35,9 @@ document.querySelector("button").addEventListener("click", (e) => {
       body: JSON.stringify(values)
     });
     if (response.ok === true) {
-      const user = await response.json();
-      console.log(`user ${user["user-name"]} was created`);
-      userMessageSuccessful();
+      const data = await response.json();
+      console.log(data)
+      userMessageSuccessful(data.message);
       document.querySelector("button").disabled = false;
     }
   }
